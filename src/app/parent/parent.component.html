@@ -1,0 +1,5 @@
+<div>
+    <input type="text" [(ngModel)]="inputValue">
+    <app-child (childEvent)="dataFromChild($event)" [simpleInput]=inputValue></app-child>
+    <p>data from child: {{fromChild}}</p>
+</div>

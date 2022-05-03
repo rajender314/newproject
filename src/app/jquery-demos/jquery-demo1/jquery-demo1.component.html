@@ -1,0 +1,65 @@
+ <!-- Button trigger modal -->
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary" (click)="closeModal()">Save changes</button>W -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="grid-display">
+    <a routerLink="/parent">Move to ParentComp</a>
+
+    <a routerLink="/student">Move to LazyModule</a>
+    <!-- <div *ngFor="let item of imgArray; let i=index" >
+      <div style="display: flex;">
+      <img [src]="item.data.thumb" alt=""   height="100px" [lightbox]="i" width="100px" >
+    </div>
+    </div> -->
+    
+  </div>
+
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Choose an option</mat-label>
+    <mat-select >
+      <mat-option value="option1">Option 1</mat-option>
+      <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+      <mat-option value="option3">Option 3</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+   <mat-form-field appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of foods" [value]="food.id">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+
+  <div class="transDiv">
+    <mat-icon>home</mat-icon>
+
+    <button class="btn btn-primary trans" *ngIf="!showTrans" (click)="onshowTrans()" >aaaa</button>
+    <button class="btn btn-danger trans" *ngIf="showTrans"  (click)="onshowTrans()">bbb</button>
+  </div>
+  

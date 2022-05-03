@@ -1,0 +1,88 @@
+<div class="login-sec">
+    <div class="login-page animated zoomIn">
+      <!-- <section class="login-hdr">
+        <img src="{{ image }}" alt="no-image" />
+        <p>LOGIN</p>
+      </section> -->
+      <section class="login-container">
+        <div class="login-form">
+          <form [formGroup]="loginForm">
+            <mat-form-field class="example-full-width">
+              <input
+                matInput
+                placeholder="Email"
+                formControlName="email"
+                class="form-control"
+                (input)="valuechange($event)"
+              />
+              <mat-error
+                *ngIf="
+                  loginForm.controls.email.hasError('required') && state.submitted
+                "
+              >
+                Email address is required.
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  loginForm.controls.email.hasError('pattern') && state.submitted
+                "
+              >
+                Please enter valid email address.
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input
+                type="password"
+                matInput
+                placeholder="Password"
+                formControlName="password"
+                class="form-control"
+                (input)="valuechange($event)"
+              />
+              <mat-error
+                *ngIf="
+                  loginForm.controls.password.hasError('required') &&
+                  state.submitted
+                "
+                >Password is required.
+              </mat-error>
+            </mat-form-field>
+            <div class="pi-error error" *ngIf="error">{{ error }}</div>
+  
+            <div class="form-actions">
+              <pi-form-field label="Remember Me">
+                <input type="checkbox" formControlName="remember" pi-input />
+              </pi-form-field>
+              <span class="forgot-pwd" routerLink="/forgotPassword"
+                >Forgot Password?</span
+              >
+            </div>
+  
+            <footer>
+              <div class="box">
+                <button
+                  pi-button
+                  color="accent"
+                  class="spnr-button"
+                  (click)="submit(loginForm)"
+                >
+                  <span *ngIf="!signInSpnr"> Sign In</span>
+                  <span *ngIf="signInSpnr">Signing In </span>
+                  <div class="lod-spinner spinner" *ngIf="signInSpnr">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </button>
+              </div>
+            </footer>
+          </form>
+          <!-- <p class="login-or-txt">OR</p>
+          <button pi-button class="sso-button" (click)="getLoginSsoUrl()">
+            <span> Login with SSO</span>
+          </button> -->
+        </div>
+      </section>
+    </div>
+  </div>
+  

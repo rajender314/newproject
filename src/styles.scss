@@ -1,0 +1,381 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.grid-display {
+    display: grid;
+}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// @import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+// @import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+// .ag-theme-alpine {
+//     @include ag-theme-alpine((
+//         odd-row-background-color: #CFD8DC
+//     ));
+// }
+
+.ag-theme-alpine .ag-ltr .ag-cell {
+    border-right: 2px solid red;
+}
+.ag-theme-alpine {
+    .ag-ltr {
+        .ag-cell {
+            border-right:  1px solid blue !important;
+    }
+}
+}
+.ag-theme-alpine {
+  .ag-row-selected {
+    background-color: #9ee59e !important;
+  }
+  .ag-checkbox-input-wrapper.ag-checked::after {
+   
+    color: green !important;
+  }
+  .ag-checkbox-input-wrapper.ag-indeterminate::after {
+    color: green !important;
+  }
+    .ag-root-wrapper {
+        .ag-root-wrapper-body {
+            &.ag-layout-normal {
+            // background-color: red !important;
+            }
+            .ag-root {
+
+
+                .ag-body-viewport {
+                   
+                    .ag-row {
+                        color: red;
+                      
+                      .ag-cell {
+                        border-right: 1px solid green !important;
+                       
+                        // &.ag-cell-first-right-pinned {
+                        //   border-left: 1px solid #eeeff4;
+                        //   border-right: 0px;
+                        //   justify-content: center;
+                        // }
+                        // &.ag-cell-focus {
+                        //   border: 1px solid rgba(57, 36, 137, 0.6);
+                        //   &.img-search {
+                        //     .img-delete-sec {
+                        //       .img-responsive {
+                        //           height: 30px !important;
+                        //       }
+                        //     }
+                        //   }
+                        // } 
+                        span {
+                            .img-delete-sec {
+                                // display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                                .img-responsive {
+                                    width: 25px ;
+                                   
+                                }
+                            }
+                        }
+                        input {
+                          padding: 0px 8px;
+                        }
+                      }
+                     
+                    }
+                  }
+                }
+               
+                .ag-cell-highlight-animation,
+                .ag-cell-highlight {
+                  background-color: green !important;
+                  color: #fff !important;
+                }
+        }
+    }
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: red;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f2f2f2;
+  }
+
+  .snackbar-container {
+    .success {
+      display: flex;
+      align-items: center;
+  
+      .mat-icon {
+        margin-right: 8px;
+      }
+    }
+  
+    .warning {
+      background: brown !important;
+    }
+  }
+
+
+
+
+
+
+
+  /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "assets/styles/pixel-icons.css";
+// @import "assets/styles/_global.scss";
+// @import "assets/styles/_mixins.scss";
+// @import "~animate.css/animate.css";
+
+impo * {
+  box-sizing: border-box;
+}
+
+body {
+//   margin: 0;
+//   background-color: #fff;
+//   color: #172b4d;
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 1.4;
+
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 13px;
+  background-color: #c0d4e3  !important;
+//   @include regular-font();
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  padding: 0.83em 0;
+}
+
+h3 {
+  padding: 1em 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  flex-grow: 1;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-list .mat-list-item {
+  font-size: 1em;
+}
+
+.my-dialog {
+  .mat-dialog-container {
+    .mat-dialog-heading {
+      .mat-dialog-title {
+        padding: 0;
+        font-size: 20px;
+      }
+    }
+
+    .mat-dialog-actions {
+      padding: 24px 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.ak-field-group {
+  padding: 16px 0 0 0;
+
+  .ak-field-text,
+  .ak-field-select {
+    background-color: #fafbfc;
+    border-radius: 3px;
+    border: 2px solid #dfe1e6;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #172b4d;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+    outline: none;
+    padding: 8px 6px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    width: 100%;
+  }
+}
+
+.ak-field-checkbox:checked + label {
+  &::after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAR5JREFUKBVjtNbq0/7/58/8////GzMwMDABMT7wj4GR4QwLK3MiC1STKT7VSHJMDP8ZzP7+/reACWoTkhxhJkgPyGmEnIfNJCaiNLl4azC0TvZnYGVlhhvCAmfhYHgF6TBUtXkyfP/2i4Gdg4Xh9++/YJUoNsrIC6KYiqypMGk1w5fPP+HGwzWKivMwLNmayDBlSQQDFzcbA7qmKxeewTWBGHCnvnn1heH4wXsM9q5qDPPWxTGAbAc5D2QTuiaQRriN//8zMNTkb2I4uPsWg5yiEF5NII2MlqqdQC0IwMzCxBAcbchw7uQjhjs3XiMk0FggjaBggtuMJo+L+4+JkZHxLC5ZnOLA9MrEyMKSCNR8GqjoH06FCIl/ILWgRA4A7eNpcqU9WWUAAAAASUVORK5CYII=) !important;
+  }
+}
+
+.ak-field-radio:checked + label {
+  &::after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAUBJREFUKBWdUrtKA1EQnbNuqWBhZUALA6kW1FJThdQK9jap/IAYv8HHB4ign2Bha0gVU2qxICwsiIh2VnYKGefc9Zq7G9Jk4LKzM+fcedwDCWy3cbo0VnQhsiei9SKFXEXuIujFQ3by5eGGKWyncd4S1RtVXfex8AvgVYDOKDseMO6IJOlY+1bl/6KQNPGhiNAmGWxPFemsShNS4bEyoEnMmazFqfaS7Zo1oJI+fZS4LKCCbgzRfRu+ZGeXB9JsFbsZDnLpHd2W8lxeZJGNMMpKnsQ4/WRrNYSYr3US5zIjIg+Z6eO7sD1v9KtzkhPzcQ206YH8cqZZy2GenLmfI3IyMkVY+epyeXnFDGNYctxynBJMEU5WFaj/dQ//pxrGFnzi7fP+ZW2lfW1X/gCybGfRzrcRnq3KlYn8cJT1Mo//BVIEgRPTh9NBAAAAAElFTkSuQmCC) !important;
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.7s;
+}
+
+.login_container {
+  background: #392489;
+  height: calc(100vh);
+}
+
+/* button styles*/
+.ak-button {
+  &.ak-button__appearance-accent {
+    // @include get-primary-colors();
+    background-color: #f55a32;
+    color: #fff;
+    border: 1px solid #f55a32;
+    padding: 7px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    height: auto;
+    line-height: inherit;
+    text-align: center;
+    display: block;
+    // @include regular-font();
+
+    &:hover {
+      background: #f55a32;
+    }
+
+    &.spnr-button {
+      display: flex;
+      span {
+        flex: 0.9;
+      }
+    }
+  }
+
+  &.ak-button__appearance-accent[disabled] {
+    background: rgba(9, 30, 66, 0.04);
+    color: #a5adba;
+    text-decoration: none;
+    cursor: not-allowed;
+
+    &:active,
+    &:hover {
+      background: rgba(9, 30, 66, 0.04);
+      color: #a5adba;
+      text-decoration: none;
+    }
+  }
+}
+
+.snackbar-container {
+  .success {
+    display: flex;
+    align-items: center;
+
+    .mat-icon {
+      margin-right: 8px;
+    }
+  }
+
+  .warning {
+    background: brown !important;
+  }
+}
+
+.ak-button[disabled] {
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.mat-form-field-label {
+  text-transform: uppercase !important;
+}
+
+.mat-form-field {
+//   @include regular-font();
+}
+
+.pwd-syntax {
+  max-width: 340px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #d7e7f6;
+  background-color: #f2f9ff;
+  float: left;
+  margin-left: 11px;
+
+  h4 {
+    margin: 0 0 12px 0;
+  }
+
+  .check {
+    margin: 8px 0;
+    display: flex;
+    font-size: 13px;
+
+    em {
+      font-size: 18px;
+      margin-right: 5px;
+
+      &.success {
+        color: green;
+      }
+    }
+  }
+}
+
+.text-danger {
+  color: #de0101;
+}
+
+.text-success {
+  color: #518c37;
+}

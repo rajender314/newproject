@@ -1,0 +1,22 @@
+
+<div *ngIf="showLoader" style="text-align: center;">
+    <img src="./assets/gif_loader.gif" alt="loader" >
+</div> 
+<div class="row">
+    <div class="col-md-3 col-xs-6" *ngFor="let student of students">
+        <app-student-list-item [student]="student"></app-student-list-item>
+
+    </div>
+</div>
+
+    <div *ngIf="!showLoader">
+        
+    <button (click)="onBtnClick()">Button</button>
+
+    <input type="text" id="name">
+
+    
+    </div>
+
+
+   

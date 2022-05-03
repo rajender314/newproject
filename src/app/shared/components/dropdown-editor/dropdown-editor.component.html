@@ -1,0 +1,19 @@
+<!-- <div class="offerunit-dropdown">
+    <pi-select
+     
+      [options]="selectOptions"
+      (onChange)="offerUnitChanged($event, selectOptions)"
+      [(ngModel)]="OfferUnitCellValue"
+    >
+    </pi-select>
+    </div> -->
+
+   
+     <mat-form-field appearance="fill">
+    
+    <mat-select [(ngModel)]="selectedValue" name="food" (selectionChange)="onFoodSelection1($event)">
+      <mat-option *ngFor="let food of foods" [value]="food.id">
+        {{food.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>

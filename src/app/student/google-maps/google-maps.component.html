@@ -1,0 +1,32 @@
+<div style="position: relative;">
+    <agm-map [latitude]="location.latitude"
+    [longitude]="location.longitude"
+    [zoom]='location.zoom'
+    [disableDefaultUI]="false"
+    [zoomControl]="false" >
+
+        <agm-marker   *ngFor="let m of location.markers; let i = index"
+                [latitude]="m.lat" 
+                [longitude]="m.lng"
+                (markerClick)="clickedMarker(infowindow)"
+                [iconUrl]="markerIcon"
+                >
+                <agm-info-window #infowindow>
+                    <strong>InfoWindow content</strong>
+                </agm-info-window>
+                
+        </agm-marker>
+
+
+    
+    </agm-map>
+
+<div style="position: absolute; top: 0; color: red;">sdsdsdsdsd</div>
+
+</div>
+
+
+
+
+
+<!-- <div>{{distance}}</div> -->
